@@ -1,8 +1,9 @@
 require 'rubygems'
 require 'sinatra'
-require 'server'
 
-root_dir = File.dirname(__FILE__)
+root_dir = File.join(File.expand_path(File.dirname(__FILE__)), ".")
+
+require File.join(root_dir, 'server')
 
 set :environment, :development
 set :root,  root_dir
